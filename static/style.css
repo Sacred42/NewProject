@@ -1,0 +1,19 @@
+.header{
+    height: 125px;
+    background-color: chartreuse;
+    text-align: center;
+    padding-top: 25px;
+}
+
+ul{
+    padding-top: 25px;
+}
+
+li{
+    width: 800px;
+    margin-bottom: 15px;
+}
+
+.complited{
+    text-decoration: line-through;
+}

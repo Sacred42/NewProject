@@ -2,8 +2,9 @@ const express = require('express');
 const schema = require('../model/model');
 const router = express();
 
-router.get('/', (req, res)=>{
- res.render('1page');
+router.get('/', async (req, res)=>{
+const datesDB = await schema.find({}).lean();
+ res.render('1page' , {datesDB : datesDB});
 });
 
 router.post('/2page' , (req,res)=>{

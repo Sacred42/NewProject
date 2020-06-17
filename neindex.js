@@ -2,6 +2,7 @@ const express = require('express');
 const exhbs = require('express-handlebars');
 const app = express();
 const mongoose = require('mongoose');
+const path = require('path');
 const router = require('./router/router');
 const hbs = exhbs.create({
     defaultLayout : 'main',
@@ -11,6 +12,7 @@ app.engine('hbs', hbs.engine);
 app.set('view engine', 'hbs');
 app.set('views', 'views');
 app.use(express.urlencoded({extended : true}));
+app.use(express.static(path.join(__dirname, 'static')));
 app.use(router);
 
 try {

@@ -2,5 +2,25 @@
 <form action='/2page' method="POST">
 <input type="text" name="title">
 <button type="submit">Нажать</button>
-
 </form>
+
+{{#if datesDB.length}}
+<ul>
+    {{#each datesDB}}
+    <li class="row">
+        
+        {{!-- <input class="mr-1 col-lg-1" type="checkbox" checked name="complited" id="nip"  >
+        <span class="complited col-lg-9">{{this.title}}<span> --}}
+       
+        <input class="mr-1 col-lg-1" type="checkbox" name="complited" id="nip"  >
+        <span class="col-lg-9">{{title}}<span>
+        
+        
+        <button class="ml-5 col-lg-3 float-right" id="btn">Change</button>
+    </li>
+    {{/each}}
+</ul>
+{{else}}
+<h3>элементов нет!</h3>
+{{/if}}
+
